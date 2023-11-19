@@ -20,7 +20,7 @@ export default {
 };
 </script>
 
-<style>
+<!-- <style>
 :root {
   --primary: #6a1cc3;
   --primary-dark: #370b68;
@@ -49,4 +49,4 @@ h4 {
     margin: 0 auto;
   }
 }
-</style>
+</style> -->
