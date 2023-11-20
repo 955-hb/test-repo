@@ -55,14 +55,14 @@ export default {
 }
 
 .header__nav-item {
-  color: red;
+  color: white;
   border-radius: 3px;
   display: inline;
   padding: 10px 10px;
 }
 
 .header__nav-item--active {
-  color: red;
+  color: white;
   background-color: var(--primary-dark);
 }
 
