@@ -1,8 +1,9 @@
 <template>
   <tr class="table-item__table-row">
-    <td>{{ title }}</td>
-    <td>{{ isbn }}</td>
+    <td>{{ book.title }}</td>
+    <td>{{ book.isbn }}</td>
     <td><BaseButton text="Add Bookmark" variant="secondary" /></td>
+    <td>{{ book.price }}</td>
   </tr>
 </template>
 
@@ -13,8 +14,7 @@ export default {
     BaseButton,
   },
   props: {
-    title: String,
-    isbn: String,
+    book: Object,
   },
 };
 </script>

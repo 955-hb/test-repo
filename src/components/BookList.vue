@@ -6,15 +6,15 @@
         <tr>
           <th class="table-item__table-head-name">Name</th>
           <th class="table-item__table-head--isbn">ISBN</th>
-          <th class="table-item__table-head--action">&nbsp;</th>
+          <th class="table-item__table-head--actions">&nbsp;</th>
+          <th class="table-item__table-head--actions">Price;</th>
         </tr>
       </thead>
       <tbody>
         <BookListRow
           v-for="book in books"
           :key="book.isbn"
-          :title="book.title"
-          :isbn="book.isbn"
+          :book="book"
           class="table-item__table-row"
         />
       </tbody>

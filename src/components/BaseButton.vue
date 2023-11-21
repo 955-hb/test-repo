@@ -1,5 +1,5 @@
 <template>
-  <button :class="styling">{{ text }}</button>
+  <button class="btn" :class="styling">{{ text }}</button>
 </template>
 
 <script>
@@ -19,7 +19,7 @@ export default {
   },
   computed: {
     styling() {
-      return ["btn", `btn--${this.variant}`];
+      return [`btn--${this.variant}`];
     },
   },
 };
