@@ -12,6 +12,7 @@
       </thead>
       <tbody>
         <BookListRow
+          @bookmark-change="onBookmarkChange"
           v-for="book in books"
           :key="book.isbn"
           :book="book"
@@ -39,6 +40,7 @@ export default {
           publisher: "Apress",
           price: "$28.75",
           numPages: 256,
+          isBookmarked: false,
         },
         {
           title: "Using WebPagetest",
@@ -47,6 +49,7 @@ export default {
           publisher: "O'Reilly Media",
           price: "$25.80",
           numPages: 214,
+          isBookmarked: false,
         },
         {
           title: "Web Scraping with Python",
@@ -55,6 +58,7 @@ export default {
           publisher: "O'Reilly Media",
           price: "$14.00",
           numPages: 256,
+          isBookmarked: false,
         },
         {
           title: "High Performance Mobile Web",
@@ -63,9 +67,20 @@ export default {
           publisher: "O'Reilly Media",
           price: "$7.00",
           numPages: 326,
+          isBookmarked: false,
         },
       ],
     };
+  },
+  methods: {
+    onBookmarkChange(book) {
+      console.log("bookMarkChange", book);
+      const currentBook = this.books.find(
+        (bookData) => bookData.isbn === book.isbn
+      );
+      currentBook.isBookmarked = !currentBook.isBookmarked;
+      console.log(this.books);
+    },
   },
 };
 </script>

@@ -1,9 +1,12 @@
 <template>
-  <button class="btn" :class="styling">{{ text }}</button>
+  <button @click="$emit('btn-click')" class="btn" :class="styling">
+    {{ text }}
+  </button>
 </template>
 
 <script>
 export default {
+  emits: ["btn-click"],
   props: {
     text: {
       type: String,
